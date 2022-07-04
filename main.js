@@ -33,6 +33,11 @@ billAmount = prompt("What is the bill amount?");
 
 // console.log(`Bill Amount ${Number(billAmount)}!`);
 
+while (isNaN(billAmount)) {
+    
+    billAmount = prompt("Please enter a number for the bill amount?");
+};
+
 tipRate = prompt("What is the tip rate?");
 
 // console.log(`Tip Rate ${Number(tipRate)}!`);

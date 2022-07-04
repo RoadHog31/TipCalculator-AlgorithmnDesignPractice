@@ -34,15 +34,21 @@ billAmount = prompt("What is the bill amount?");
 // console.log(`Bill Amount ${Number(billAmount)}!`);
 
 while (isNaN(billAmount)) {
-    
-    billAmount = prompt("Please enter a number for the bill amount?");
+
+    billAmount = prompt("Please enter a number for the bill amount?");    
+};
+
+while (billAmount < 0) {
+
+    billAmount = prompt("Please enter a positive number for the bill amount?");
+        
 };
 
 tipRate = prompt("What is the tip rate?");
 
 // console.log(`Tip Rate ${Number(tipRate)}!`);
 
-tip = billAmount * (tipRate / 100);
+tip = calculateBillAmount(billAmount);
 
 total = Number(billAmount) + Number(tip);
 
@@ -50,5 +56,8 @@ console.log(`Tip ${Number(tip)}!`);
 console.log(`Total ${total}!`);
 
 
-
+function calculateBillAmount(amount) {
+    
+    return amount * (tipRate / 100);
+}
 
